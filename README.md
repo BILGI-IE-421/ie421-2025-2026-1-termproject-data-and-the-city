@@ -1,112 +1,105 @@
-# IE 421 - Data Science for Engineers Term Project
+# Olympic Games Data Analysis
 
-> **Team:** Data and The City
-> **Course:** IE 421 Data Science for Engineers
-> **Institution:** Istanbul Bilgi University
-> **Term:** Fall 2024-2025
+> IE 421 - Data Science for Engineers | Istanbul Bilgi University | Fall 2024-2025
 
 ---
 
-## Overview
+## About The Project
 
-This project explores **120+ years of Olympic Games data** to answer three research questions using descriptive analytics, regression, and classification techniques. We analyze historical patterns from 1896-2016 and incorporate Paris 2024 athlete registration data for contemporary insights.
-
----
-
-## Student Names
-
-- Mehmet Fatih Cetinkaya (121205031)
-- Mehmet Tolga Cakan (121203029)
-- Demet Irem Yilmaz (121203095)
-- Sila Kahya (123203018)
-- Eylul Balci (122203020)
+This project analyzes **120+ years of Olympic history** (1896-2016) combined with **Paris 2024** athlete data to explore gender equality trends, predict national medal counts, and investigate whether physical attributes influence athletic success.
 
 ---
 
-## Files
+## Team: Data and The City
 
-| Folder/File | Description |
-|-------------|-------------|
-| `data/` | Contains the datasets used |
-| `scripts/` | Python scripts for data processing and analysis |
-| `visuals/` | Generated visualizations (PNG files) |
-| `css/` | Stylesheet for the web interface |
-| `index.html` | Main project webpage |
-| `requirements.html` | Detailed analysis and results page |
+| Name | Student ID |
+|------|------------|
+| Mehmet Fatih Cetinkaya | 121205031 |
+| Mehmet Tolga Cakan | 121203029 |
+| Demet Irem Yilmaz | 121203095 |
+| Sila Kahya | 123203018 |
+| Eylul Balci | 122203020 |
 
 ---
 
-## Research Questions
+## Research Questions & Results
 
-### Q1: Gender Parity Analysis
-*How has gender participation evolved in the Olympics?*
+### Q1: Gender Parity in the Olympics
 
-- Analyzes female participation trends from 1896 to 2016
-- Examines discipline-level gender balance at Paris 2024
-- **Method:** Descriptive statistics with time-series visualization
+**Question:** How has female participation changed over 120 years?
 
-### Q2: Medal Count Prediction
-*Can we predict a nation's medal count?*
+We tracked the evolution of gender balance from the first modern Olympics to today.
 
-- Predicts total medals using delegation size and historical performance
-- Training: 1960-2012 | Validation: 2016 Rio Olympics
-- **Method:** Multiple Linear Regression
-- **Focus:** Top-20 performing nations
+![Gender Timeline](visuals/q1_gender_timeline.png)
+
+**Key Findings:**
+- 1896: 0% female athletes
+- 2016: 45.03% female athletes
+- Paris 2024: 49.09% female athletes (near parity!)
+
+![Paris 2024 Parity](visuals/q1_paris2024_parity.png)
+
+---
+
+### Q2: Predicting Medal Counts
+
+**Question:** Can we predict how many medals a country will win?
+
+Using Multiple Linear Regression with delegation size and historical performance as features.
+
+![Medal Prediction](visuals/q2_prediction_scatter.png)
+
+**Model Performance (2016 Validation):**
+| Metric | All NOCs | Top-20 NOCs |
+|--------|----------|-------------|
+| R² | 0.8927 | 0.7779 |
+| RMSE | 9.49 | 27.04 |
+
+---
 
 ### Q3: Athlete Success Classification
-*Do physical attributes predict medal success?*
 
-- Classifies athletes as medalists vs non-medalists
-- Features: Age, Height, Weight, Sex
-- **Method:** Logistic Regression with threshold tuning
-- **Scope:** Post-2000 Olympics, high-physicality sports
+**Question:** Do biometrics (age, height, weight) predict medal success?
+
+Logistic Regression model trained on post-2000 Olympics data for high-physicality sports.
+
+![Classification Results](visuals/q3_classification_results.png)
+
+**Results:**
+| Metric | Value |
+|--------|-------|
+| ROC-AUC | 0.5975 |
+| F1 Score | 0.2381 |
+| Best Threshold | 0.51 |
+
+**Conclusion:** Physical attributes alone are weak predictors of medal success. Training, technique, and mental preparation matter more than biometrics.
 
 ---
 
-## Datasets
+## Project Structure
 
-| Dataset | Period | Records | Source |
-|---------|--------|---------|--------|
-| Historical Olympics | 1896-2016 | 271,116 | [Kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results) |
-| Paris 2024 Athletes | 2024 | 11,113 | [Kaggle](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games) |
+```
+├── css/style.css           # Website styling
+├── data/                   # Datasets (athlete_events.csv, athletes.csv)
+├── scripts/                # Python analysis scripts
+├── visuals/                # Generated charts and graphs
+├── index.html              # Project homepage
+├── requirements.html       # Detailed results page
+└── README.md
+```
 
 ---
 
-## Quick Start
+## How to Run
 
 ```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Run all analyses
 python scripts/generate_all.py
 ```
 
 ---
 
-## Key Results
+## Data Sources
 
-| Question | Metric | Value |
-|----------|--------|-------|
-| Q1 | Female ratio (2016) | 45.03% |
-| Q1 | Female ratio (Paris 2024) | 49.09% |
-| Q2 | R² (All NOCs) | 0.8927 |
-| Q2 | RMSE (All NOCs) | 9.49 |
-| Q3 | ROC-AUC | 0.5975 |
-| Q3 | F1 Score | 0.2381 |
-
----
-
-## Technologies
-
-- Python 3.x
-- pandas, numpy
-- matplotlib, seaborn
-- scikit-learn
-- HTML/CSS
-
----
-
-## License
-
-Educational project for IE 421 Data Science course at Istanbul Bilgi University.
+- **Historical Data (1896-2016):** [Kaggle - 120 Years of Olympic History](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
+- **Paris 2024 Data:** [Kaggle - Paris 2024 Olympic Summer Games](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games)
