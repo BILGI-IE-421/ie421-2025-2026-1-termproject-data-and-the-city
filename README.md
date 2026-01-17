@@ -1,6 +1,6 @@
 # Olympic Games Data Analysis
 
-> IE 421 - Data Science for Engineers | Istanbul Bilgi University | Fall 2024-2025
+> IE 421 - Data Science for Engineers | Istanbul Bilgi University 
 
 ---
 
@@ -12,9 +12,9 @@ This project analyzes **120+ years of Olympic history** (1896-2016) combined wit
 
 ## Project Website
 
-**Web Page:** https://cetinkayafatih.github.io/data-and-the-city-olympics/
+**Web Page:** https://cetinkayafatih.github.io/dataandthecity-olympics/
 
-**Repository:** https://github.com/cetinkayafatih/data-and-the-city-olympics
+**Repository:** https://github.com/cetinkayafatih/dataandthecity-olympics
 
 ---
 
