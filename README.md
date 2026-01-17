@@ -1,6 +1,6 @@
 # Olympic Games Data Analysis
 
-> IE 421 - Data Science for Engineers | Istanbul Bilgi University | Fall 2024-2025
+> IE 421 - Data Science for Engineers | Istanbul Bilgi University | Fall 2025-2026
 
 ---
 
