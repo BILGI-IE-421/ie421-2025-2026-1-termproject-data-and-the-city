@@ -78,20 +78,6 @@ This project analyzes **120+ years of Olympic history** (1896-2016) combined wit
 
 ---
 
-## Project Structure
-
-```
-├── css/style.css           # Website styling
-├── data/                   # Datasets
-├── scripts/                # Python analysis scripts
-├── visuals/                # Generated charts
-├── index.html              # Project homepage
-├── requirements.html       # Detailed results page
-└── README.md
-```
-
----
-
 ## Data Sources
 
 - **Historical Data (1896-2016):** [Kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
