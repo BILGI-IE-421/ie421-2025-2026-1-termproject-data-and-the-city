@@ -1,12 +1,20 @@
 # Olympic Games Data Analysis
 
-> IE 421 - Data Science for Engineers | Istanbul Bilgi University | Fall 2025-2026
+> IE 421 - Data Science for Engineers | Istanbul Bilgi University | Fall 2024-2025
 
 ---
 
 ## About The Project
 
 This project analyzes **120+ years of Olympic history** (1896-2016) combined with **Paris 2024** athlete data to explore gender equality trends, predict national medal counts, and investigate whether physical attributes influence athletic success.
+
+---
+
+## Project Website
+
+**Web Page:** https://cetinkayafatih.github.io/data-and-the-city-olympics/
+
+**Repository:** https://github.com/cetinkayafatih/data-and-the-city-olympics
 
 ---
 
@@ -28,8 +36,6 @@ This project analyzes **120+ years of Olympic history** (1896-2016) combined wit
 
 **Question:** How has female participation changed over 120 years?
 
-We tracked the evolution of gender balance from the first modern Olympics to today.
-
 ![Gender Timeline](visuals/q1_gender_timeline.png)
 
 **Key Findings:**
@@ -45,8 +51,6 @@ We tracked the evolution of gender balance from the first modern Olympics to tod
 
 **Question:** Can we predict how many medals a country will win?
 
-Using Multiple Linear Regression with delegation size and historical performance as features.
-
 ![Medal Prediction](visuals/q2_prediction_scatter.png)
 
 **Model Performance (2016 Validation):**
@@ -61,8 +65,6 @@ Using Multiple Linear Regression with delegation size and historical performance
 
 **Question:** Do biometrics (age, height, weight) predict medal success?
 
-Logistic Regression model trained on post-2000 Olympics data for high-physicality sports.
-
 ![Classification Results](visuals/q3_classification_results.png)
 
 **Results:**
@@ -72,7 +74,7 @@ Logistic Regression model trained on post-2000 Olympics data for high-physicalit
 | F1 Score | 0.2381 |
 | Best Threshold | 0.51 |
 
-**Conclusion:** Physical attributes alone are weak predictors of medal success. Training, technique, and mental preparation matter more than biometrics.
+**Conclusion:** Physical attributes alone are weak predictors of medal success.
 
 ---
 
@@ -80,9 +82,9 @@ Logistic Regression model trained on post-2000 Olympics data for high-physicalit
 
 ```
 ├── css/style.css           # Website styling
-├── data/                   # Datasets (athlete_events.csv, athletes.csv)
+├── data/                   # Datasets
 ├── scripts/                # Python analysis scripts
-├── visuals/                # Generated charts and graphs
+├── visuals/                # Generated charts
 ├── index.html              # Project homepage
 ├── requirements.html       # Detailed results page
 └── README.md
@@ -90,16 +92,7 @@ Logistic Regression model trained on post-2000 Olympics data for high-physicalit
 
 ---
 
-## How to Run
-
-```bash
-pip install -r requirements.txt
-python scripts/generate_all.py
-```
-
----
-
 ## Data Sources
 
-- **Historical Data (1896-2016):** [Kaggle - 120 Years of Olympic History](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
-- **Paris 2024 Data:** [Kaggle - Paris 2024 Olympic Summer Games](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games)
+- **Historical Data (1896-2016):** [Kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
+- **Paris 2024 Data:** [Kaggle](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games)
