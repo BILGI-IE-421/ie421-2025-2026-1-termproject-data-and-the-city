@@ -10,6 +10,16 @@ This project analyzes 120+ years of Olympic history (1896-2016) combined with Pa
 
 ---
 
+## Research Questions
+
+**Q1 - Gender Parity Analysis:** How has female participation evolved in the Olympics from 1896 to 2016, and what is the current state at Paris 2024?
+
+**Q2 - Medal Count Prediction:** Can we predict a country's total medal count using delegation size and historical performance? (Multiple Linear Regression)
+
+**Q3 - Athlete Classification:** Do biometric features (age, height, weight) predict medal success in high-physicality sports? (Logistic Regression)
+
+---
+
 ## Student Names
 
 | Name | Student ID |
